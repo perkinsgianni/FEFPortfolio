@@ -172,10 +172,14 @@ article {
     margin-bottom: 6rem;
 }
 
+article > .article-img:last-child {
+    margin-bottom: 0;
+}
+
 /* Contact */
 .contact {
     position: relative;
-    margin-top: 20px;
+    margin-top: 100px;
     text-align: center;
 }
 
