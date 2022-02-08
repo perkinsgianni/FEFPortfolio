@@ -1,0 +1,264 @@
+:root {
+    --primary:#92626A;
+    --dk-grey: #333;
+    --max-width: 960px;
+    --spacing: 4rem;
+    --img-width: 350px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.neutral-theme {
+    background-color: white;
+    --button-color: var(--primary);
+    --button-hover-color: white;
+}
+
+.primary-theme {
+    color: white;
+    background-color: var(--primary);
+    --button-color: white;
+    --button-hover-color: var(--primary);
+}
+
+.primary-theme .button {
+    margin: 2rem 40% auto;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: clamp(3rem, 5vw, 200rem);
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+span {
+    color: var(--primary);
+}
+
+.button {
+    display: inline-block;
+    align-self: center;
+    width: max-content;
+    padding: 1rem;
+    border: 2px solid var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.button:hover {
+    color: var(--button-hover-color);
+    background-color: var(--button-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-link::after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: .75rem;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-top: .75rem solid var(--primary);
+}
+
+.header-link:hover::after {
+    border-top-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main */
+section {
+    padding: var(--spacing);
+}
+
+h2 {
+    margin: 1rem auto;
+    margin-bottom: var(--spacing);
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* About Me  */
+.about {
+    padding: var(--spacing);
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+}
+
+.about-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about-img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin-left: 0 auto var(--spacing);
+    filter: grayscale(100%);
+}
+
+.about-img:hover {
+    filter: grayscale(0);
+}
+
+blockquote {
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+/* Projects */
+article {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column-reverse !important;
+}
+
+.article-img {
+    border: 2px solid yellow;
+    margin-bottom: 2rem;
+}
+
+/* .article-text {
+    border: 2px solid red;
+    width: 70%;
+} */
+
+.contact {
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -100px;
+    height: 0;
+    width: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
+}
+
+.contact .button {
+    margin: 2rem auto;
+}
+
+/* Footer */
+footer {
+   padding: var(--spacing);
+   text-align: center;
+   background-color: black;
+   color: white;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing);
+}
+
+.social-item {
+    margin: 0 1rem;
+}
+
+.social-link {
+    display: block;
+    height: 60px;
+    width: 60px;
+    font-size: 0px;
+    background: no-repeat;
+    background-size: 60px;
+}
+
+.github {
+    background-image: url(assets/github.png);
+}
+
+.linkedin {
+    background-image: url(assets/linkedin.png);
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Media  queries */
+@media (min-width: 800px) {
+    .about-container {
+        display: flex;
+    }
+
+    .about-text {
+        margin-left: var(--spacing);
+    }
+
+    article {
+        flex-direction: row;
+        max-width: 960px;
+        margin: 0 auto var(--spacing);
+    }
+
+    .article-img {
+        margin-left: 2rem;
+        max-width: 350px;
+        object-fit: cover;
+    }
+}
