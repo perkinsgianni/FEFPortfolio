@@ -1,6 +1,6 @@
 :root {
     --primary:#92626A;
-    --dk-grey: #333;
+    --black: #000000;
     --max-width: 960px;
     --spacing: 4rem;
     --img-width: 350px;
@@ -8,7 +8,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
 }
 
 .neutral-theme {
@@ -24,9 +23,9 @@ body {
     --button-hover-color: var(--primary);
 }
 
-.primary-theme .button {
+/* .primary-theme .button {
     margin: 2rem 40% auto;
-}
+} */
 
 /* Header */
 header {
@@ -41,7 +40,6 @@ header {
 h1 {
     margin-bottom: 2rem;
     font-size: clamp(3rem, 5vw, 200rem);
-    font-size: 5vw;
     font-weight: bold;
     line-height: 1.4em;
 }
@@ -94,10 +92,9 @@ section {
 }
 
 h2 {
-    margin: 1rem auto;
     margin-bottom: var(--spacing);
     text-align: center;
-    font-size: 3vw;
+    font-size: clamp(3rem, 5vw, 200rem);;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -115,7 +112,6 @@ h3 {
 
 /* About Me  */
 .about {
-    padding: var(--spacing);
     position: relative;
     margin-bottom: 100px;
 }
@@ -132,14 +128,14 @@ h3 {
 }
 
 .about-container {
-    max-width: 960px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
 .about-img {
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: var(--img-width);
     margin-left: 0 auto var(--spacing);
     filter: grayscale(100%);
 }
@@ -179,6 +175,7 @@ article {
     width: 70%;
 } */
 
+/* Contact */
 .contact {
     position: relative;
     margin-top: 100px;
@@ -204,7 +201,7 @@ article {
 footer {
    padding: var(--spacing);
    text-align: center;
-   background-color: black;
+   background-color: var(--black);
    color: white;
 }
 
@@ -227,17 +224,17 @@ footer {
     background-size: 60px;
 }
 
+.social-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
 .github {
     background-image: url(assets/github.png);
 }
 
 .linkedin {
     background-image: url(assets/linkedin.png);
-}
-
-.social-link:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
 }
 
 /* Media  queries */
@@ -252,13 +249,13 @@ footer {
 
     article {
         flex-direction: row;
-        max-width: 960px;
+        max-width: var(--max-width);
         margin: 0 auto var(--spacing);
     }
 
     .article-img {
         margin-left: 2rem;
-        max-width: 350px;
+        max-width: var(--img-width);
         object-fit: cover;
     }
 }
