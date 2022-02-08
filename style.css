@@ -164,13 +164,13 @@ cite {
 
 /* Projects */
 article {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     flex-direction: column-reverse !important;
 }
 
 .article-img {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     margin-bottom: 2rem;
 }
 
