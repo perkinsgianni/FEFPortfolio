@@ -166,13 +166,13 @@ article {
 }
 
 .article-img {
-    border: 0.25px solid black;
     height: 100%;
     width: 26%;
     margin-bottom: 6rem;
 }
 
 article > .article-img:last-child {
+    border: 0.25px solid black;
     margin-bottom: 0;
 }
 
