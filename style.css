@@ -23,6 +23,10 @@ body {
     --button-hover-color: var(--primary);
 }
 
+.primary-theme .button {
+    margin-top: 1rem;
+}
+
 /* Header */
 header {
     height: 100vh;
@@ -132,7 +136,10 @@ h3 {
     display: block;
     width: 100%;
     max-width: var(--img-width);
-    margin-left: 0 auto var(--spacing);
+    /* margin-left: 0 auto var(--spacing); */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--spacing);
     filter: grayscale(100%);
 }
 
@@ -141,7 +148,7 @@ h3 {
 }
 
 blockquote {
-    margin-top: 5rem;
+    margin-top: var(--spacing);
     font-size: 2rem;
     font-style: italic;
     text-align: center;
@@ -162,24 +169,35 @@ article {
 }
 
 .article-text {
-    width: 70%;
+    width: 71%;
+}
+
+/* .article-text:last-of-type {
+    width: 71%;
+} */
+
+.article-text .button {
+    margin-bottom: 3rem;
+}
+
+.article-text:last-of-type .button {
+    margin-bottom: 0rem;
 }
 
 .article-img {
     height: 100%;
-    width: 26%;
-    margin-bottom: 6rem;
+    width: 25%;
 }
 
-article > .article-img:last-child {
+.article-img:last-child {
     border: 0.25px solid black;
-    margin-bottom: 0;
+    width: 25%;
 }
 
 /* Contact */
 .contact {
     position: relative;
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
 }
 
