@@ -167,9 +167,6 @@ article {
 
 .article-text {
     width: 71%;
-}
-
-.article-text .button {
     margin-bottom: 3rem;
 }
 
@@ -186,7 +183,7 @@ article {
 /* Contact */
 .contact {
     position: relative;
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
 }
 
