@@ -172,12 +172,12 @@ article {
 
 .article-img {
     height: 100%;
-    width: 25%;
+    width: 240px;
 }
 
 .article-img:last-child {
     border: 0.25px solid black;
-    width: 25%;
+    width: 240px;
 }
 
 /* Contact */
