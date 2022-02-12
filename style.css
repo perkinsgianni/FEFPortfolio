@@ -254,15 +254,13 @@ footer {
 
     article {
         flex-direction: row;
-        max-width: 960px;
-        /* max-width: var(--max-width); */
+        max-width: var(--max-width);
         margin: 0 auto var(--spacing);
     }
 
     .article-img {
         margin-left: 2rem;
-        max-width: 350px;
-        /* max-width: var(--img-width); */
+        max-width: var(--img-width);
         object-fit: cover;
     }
 }
